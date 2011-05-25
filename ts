@@ -11,6 +11,16 @@ case $1 in
 		echo "EXAMPLE: $0 overhead"
 		exit
 		;;
+	'-L')	# `cat' the entire timesheet
+		cat $timesheet
+		exit
+		;;
+	'-l')	# `cat' today's timesheet
+		lines=`wc -l <$timesheet | cut -c 7-`
+		line=`grep -n -e "# $today" <$timesheet | grep -o -e [0-9]*`
+		tail -n `expr $lines - $line + 1` $timesheet
+		exit
+		;;
 	'in')
 		if [ $create_today == '0' ]; then
 			echo -e "\n\n# $today" >>$timesheet

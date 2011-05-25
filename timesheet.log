@@ -3,7 +3,7 @@
 
 # Fri 05/20/11
 13:50		*in*
-15:50	[02:00]	user-voice
+15:50	[02:00]	techsuggestions
 16:20	[00:30]	overhead
 16:45	[00:25]	www-migration
 16:45		*out*
@@ -11,9 +11,23 @@
 17:40	[00:25]	www-migration
 17:40		*out*
 
+
 # Mon 05/23/11
 14:40		*in*
 15:00	[00:20]	overhead
 15:30	[00:30]	techsuggestions
 17:05	[01:35]	www-migration
-17:18	[00:13]	overhead
+17:18	[00:13]	timeslips
+17:25	[00:07]	overhead
+17:25	[00:00]	overhead
+17:27		*out*
+
+
+# Wed 05/25/11
+14:00		*in*
+14:10	[00:10]	overhead
+14:30	[00:20]	proj-mgmt
+16:00	[01:30]	identity-css
+16:20	[00:20]	identity-test
+16:40	[00:20]	overhead
+16:55	[00:15]	proj-mgmt
