@@ -1,5 +1,6 @@
 #!/bin/bash
 # ts - for timeslips/timesheet
+# NOTE: This is drrty. >:)
 timesheet="/Users/andrus/work/timesheet.log"
 today=`date "+%a %D"`
 seconds=`date +%S`
