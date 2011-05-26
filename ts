@@ -23,8 +23,8 @@ case $1 in
 		exit
 		;;
 	'-s')	# sum the time spent on each task today
+		echo `$0 -l | head -n 1`
 		$0 -l | awk '
-			NR == 1 { print $0; }
 			NR != 1 {
 				if ($2!="*in*"&&$2!="*out*") {
 					h[$3] += int(substr($2,2,2));
@@ -34,10 +34,10 @@ case $1 in
 				for (i in h) {
 					h[i] += int(m[i] / 60);
 					m[i] %= 60;
-					printf("%s\t %02d:%02d\n",i,h[i],m[i]);
+					printf("%02d:%02d\t%s\n",h[i],m[i],i);
 				}
 			}
-		'
+		' | sort -k 1
 		exit;
 		;;
 	'in')
