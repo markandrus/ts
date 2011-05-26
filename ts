@@ -21,6 +21,24 @@ case $1 in
 		tail -n `expr $lines - $line + 1` $timesheet
 		exit
 		;;
+	'-s')	# sum the time spent on each task today
+		$0 -l | awk '
+			NR == 1 { print $0; }
+			NR != 1 {
+				if ($2!="*in*"&&$2!="*out*") {
+					h[$3] += int(substr($2,2,2));
+					m[$3] += int(substr($2,5,2));
+				}
+			} END {
+				for (i in h) {
+					h[i] += int(m[i] / 60);
+					m[i] %= 60;
+					printf("%s\t %02d:%02d\n",i,h[i],m[i]);
+				}
+			}
+		'
+		exit;
+		;;
 	'in')
 		if [ $create_today == '0' ]; then
 			echo -e "\n\n# $today" >>$timesheet
