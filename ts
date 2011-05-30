@@ -18,13 +18,26 @@ case $1 in
 		;;
 	'-l')	# `cat' today's timesheet
 		lines=`wc -l <$timesheet | cut -c 7-`
-		line=`grep -n -e "# $today" <$timesheet | grep -o -e [0-9]*`
-		tail -n `expr $lines - $line + 1` $timesheet
+		if [ "$2" == '' ]; then
+			day=$today
+		else
+			day=`$0 -n | awk -v day="$2" '$1 == day { printf("%s %s %s\n", $2, $3, $4) }'`
+		fi
+		line=`grep -n -e "$day" <$timesheet | grep -o -e [0-9]*`
+		if [ "$line" == '' ]; then
+			echo "Error: no timesheet for requested day."
+			exit
+		fi
+		tail -n `expr $lines - $line + 1` $timesheet | awk '{ if ($0 == "") { exit } else { print $0 } }'
 		exit
 		;;
-	'-s')	# sum the time spent on each task today
-		echo `$0 -l | head -n 1`
-		$0 -l | awk '
+	'-n')	# number the days
+		cat $timesheet | grep -o -E "^# [a-zA-Z]{3} ([0-9]{2}/*)+" | nl -ba | sort -nr | cut -f2- | nl -ba | sort -nr
+		exit
+		;;
+	'-s')	# sum the time spent on each task for the requested date
+		echo "# $today"
+		$0 -l $2 | awk '
 			NR != 1 {
 				if ($2!="*in*"&&$2!="*out*") {
 					h[$3] += int(substr($2,2,2));
@@ -38,7 +51,7 @@ case $1 in
 				}
 			}
 		' | sort -k 1
-		exit;
+		exit
 		;;
 	'in')
 		if [ $create_today == '0' ]; then
