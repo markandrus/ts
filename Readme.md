@@ -28,6 +28,7 @@ To view today's timesheet, execute `ts -l` or `ts -l 1`. The result should look 
 
 ### Summing hours
 Similarly, to sum today's hours spent on individual tasks, execute `ts -s` or `ts -s 1`:
+
 	# Wed 06/01/11
 	00:11	portal-apps
 	00:24	overhead
