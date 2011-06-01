@@ -45,3 +45,15 @@
 17:21	[00:48]	www-migration
 17:26	[00:05]	overhead
 17:26		*out*
+
+
+# Wed 06/01/11
+13:35		*in*
+13:44	[00:09]	overhead
+15:11	[01:27]	www-migration
+15:23	[00:12]	overhead
+16:13	[00:50]	proj-mgmt
+17:28	[01:15]	www-migration
+17:39	[00:11]	portal-apps
+17:42	[00:03]	overhead
+17:43		*out*
