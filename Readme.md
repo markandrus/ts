@@ -1,6 +1,6 @@
 ts
 ==
-`ts` stands for "time sheet" or "time slips", after [Sage Timeslips](http://www.sagetimeslips.com), though `ts` is not related to Sage.
+`ts` stands for "time sheet" or "time slips", after [Sage Timeslips](http://www.sagetimeslips.com) (though `ts` is not related to Sage).
 
 ## Purpose
 `ts` generates a timesheet in a format intended to be simple to pass to a program like `gnuplot`, so that eventually you can visualize your work data, realize how long you sit in front of your computer, etc.
