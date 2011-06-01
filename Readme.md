@@ -1,6 +1,6 @@
 ts
 ==
-`ts` stands for "time sheet" or "time slips", after (Sage Timeslips)[http://www.sagetimeslips.com], though `ts` is not related to Sage.
+`ts` stands for "time sheet" or "time slips", after [Sage Timeslips](http://www.sagetimeslips.com), though `ts` is not related to Sage.
 
 ## Usage
 `ts` is intended to be used at work. While at work, I might issue commands as follows:
