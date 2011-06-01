@@ -2,6 +2,9 @@ ts
 ==
 `ts` stands for "time sheet" or "time slips", after [Sage Timeslips](http://www.sagetimeslips.com), though `ts` is not related to Sage.
 
+## Purpose
+`ts` generates a timesheet in a format intended to be simple to pass to a program like `gnuplot`, so that eventually you can visualize your work data, realize how long you sit in front of your computer, etc.
+
 ## Usage
 `ts` is intended to be used at work. While at work, I might issue commands as follows:
 
@@ -36,7 +39,7 @@ Similarly, to sum today's hours spent on individual tasks, execute `ts -s` or `t
 	02:42	www-migration
 
 ### Viewing and summing past days
-Executing `ts -n` number print the days in the timesheet, prefixed with a number to pass to the `ts -l` and `ts -s` commands. The most recent day is numbered 1:
+Executing `ts -n` will print the days in the timesheet, prefixed with a number to pass to the `ts -l` and `ts -s` commands. The most recent day is numbered 1:
 
 	     5	# Fri 05/20/11
 	     4	# Mon 05/23/11
@@ -45,3 +48,7 @@ Executing `ts -n` number print the days in the timesheet, prefixed with a number
 	     1	# Wed 06/01/11
 
 Given the above information, if I wanted to see the timesheet for Friday, May 20, I would execute `ts -l 5`.
+
+## Todo
+* `ts` is a Bash shell script. Everything written in shell script feels like a hack. Granted I chose this in part to remind myself how to use `awk` and other Unix tools, but it might make sense for me to port this to a more reasonable language later.
+* Add output to `gnuplot` features.
