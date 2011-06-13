@@ -57,3 +57,47 @@
 17:39	[00:11]	portal-apps
 17:42	[00:03]	overhead
 17:43		*out*
+
+
+# Fri 06/03/11
+13:59		*in*
+14:15	[00:16]	overhead
+15:17	[01:02]	portal-apps
+16:24	[01:07]	portal-apps
+17:24	[01:00]	www-migration
+17:34	[00:10]	overhead
+18:34	[01:00]	www-migration
+18:36	[00:02]	portal-apps
+18:41	[00:05]	overhead
+18:41		*out*
+
+
+# Mon 06/06/11
+14:44		*in*
+17:26	[02:42]	www-migration
+17:33	[00:07]	parking-lot
+17:39	[00:06]	overhead
+17:39		*out*
+
+
+# Wed 06/08/11
+14:50		*in*
+15:05	[00:15]	overhead
+16:05	[01:00]	portal-apps
+16:11	[00:06]	proj-mgmt
+17:00	[00:49]	portal-apps
+17:08	[00:08]	overhead
+17:48	[00:40]	portal-apps
+17:50	[00:02]	overhead
+
+
+# Fri 06/10/11
+15:59		*in*
+19:13	[03:14]	portal-apps
+
+
+# Mon 06/13/11
+09:19		*in*
+12:03	[02:44]	portal-apps
+13:27	[01:24]	portal-apps
+13:44	[00:17]	portal-apps

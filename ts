@@ -17,7 +17,7 @@ case $1 in
 		exit
 		;;
 	'-l')	# `cat' today's timesheet
-		lines=`wc -l <$timesheet | cut -c 7-`
+		lines=`wc -l <$timesheet | cut -f1-`
 		if [ "$2" == '' ]; then
 			day=$today
 		else
