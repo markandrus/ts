@@ -32,7 +32,7 @@ case $1 in
 		exit
 		;;
 	'-n')	# number the days
-		cat $timesheet | grep -o -E "^# [a-zA-Z]{3} ([0-9]{2}/*)+" | nl -ba | sort -nr | cut f 2 | nl -ba | sort -nr
+		cat $timesheet | grep -o -E "^# [a-zA-Z]{3} ([0-9]{2}/*)+" | nl -ba | sort -nr | cut -f 2 | nl -ba | sort -nr
 		exit
 		;;
 	'-s')	# sum the time spent on each task for the requested date
