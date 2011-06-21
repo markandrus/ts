@@ -35,6 +35,10 @@ case $1 in
 		cat $timesheet | grep -o -E "^# [a-zA-Z]{3} ([0-9]{2}/*)+" | nl -ba | sort -nr | cut -f 2 | nl -ba | sort -nr
 		exit
 		;;
+	'-S')	# sum every day individually
+		for i in `$0 -n | cut -f1`; do $0 -s $i; echo -e "\n"; done;
+		exit
+		;;
 	'-s')	# sum the time spent on each task for the requested date
 		echo "# $today"
 		$0 -l $2 | awk '
