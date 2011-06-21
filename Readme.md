@@ -52,3 +52,6 @@ Given the above information, if I wanted to see the timesheet for Friday, May 20
 ## Todo
 * `ts` is a Bash shell script. Everything written in shell script feels like a hack. Granted I chose this in part to remind myself how to use `awk` and other Unix tools, but it might make sense for me to port this to a more reasonable language later.
 * Add output to `gnuplot` features.
+
+## Extras
+Now includes derivative `coffee` script to keep track of how much caffeine you pump into your system and when. :-)
