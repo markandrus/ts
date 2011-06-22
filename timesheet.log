@@ -160,7 +160,7 @@
 11:34		*out*
 12:17		*in*
 12:34	[00:17]	25yearclub
-12:43	[00:09]	portalapps
+12:43	[00:09]	portal-apps
 12:53	[00:10]	proj-mgmt
 13:13	[00:20]	portal-apps
 14:52	[01:39]	ws-picnic
@@ -192,3 +192,26 @@
 09:54		*in*
 10:09	[00:15]	overhead
 11:25	[01:16]	portal-apps
+12:20	[00:55]	portal-testing
+12:27	[00:07]	overhead
+12:27		*out*
+13:06		*in*
+13:40	[00:34]	portal-testing
+13:50	[00:10]	portal-apps
+14:08	[00:18]	portal-apps
+14:27	[00:19]	overhead
+15:01	[00:34]	cspp
+15:23	[00:22]	ws-picnic
+16:02	[00:39]	ws-picnic
+16:12	[00:10]	cspp
+16:23	[00:11]	proj-mgmt
+16:35	[00:12]	proj-mgmt
+16:43	[00:08]	overhead
+17:06	[00:23]	portal-apps
+17:13	[00:07]	overhead
+17:15		*out*
+
+
+# Wed 06/22/11
+09:58		*in*
+10:28	[00:30]	portal-apps-testing
